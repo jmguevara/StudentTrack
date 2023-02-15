@@ -1,4 +1,4 @@
-//____ create db ____
+-- ____ create db ____
 CREATE DATABASE EstudentTracker; 
 
 CREATE TABLE dbo.Persona
@@ -60,7 +60,7 @@ CREATE TABLE dbo.Tardias(
 
 
 
-//—————Insert Data———————————
+-- —————Insert Data———————————
 INSERT INTO Estados (Name)
 VALUES ('Cartago')
 ,('Alajuela')
@@ -168,10 +168,10 @@ VALUES ('2022-06-11', 1)
 
 
 
-//———————sp——————————
+-- ———————sp——————————
 
 
-//——3——
+-- ——3——
 USE EstudentTrackerTest;  
 GO  
 CREATE PROCEDURE getParentInfo  
@@ -192,7 +192,7 @@ AS
 GO 
 
 
-//----run 
+-- ----run 
 DECLARE @RC int
 DECLARE @FirstNameEstudent varchar(50)
 DECLARE @LastNameEstudent varchar(50)
@@ -205,7 +205,7 @@ EXECUTE @RC = [dbo].[getParentInfo]
 GO
 
 
-//------4-------
+-- ------4-------
 USE EstudentTrackerTest;  
 GO  
 CREATE PROCEDURE city 
@@ -228,7 +228,7 @@ AS
 
 GO 
 
-//----run 
+-- ----run 
 DECLARE @RC int
 EXECUTE @RC = [dbo].[city] 
 GO
